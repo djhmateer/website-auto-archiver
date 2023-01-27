@@ -26,7 +26,7 @@ rm packages-microsoft-prod.deb
 # nginx
 sudo apt-get install nginx -y
 
-# .NET 6 SDK
+# .NET SDK
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-7.0
 
@@ -47,7 +47,7 @@ sudo nginx -s reload
 
 # compile and publish the web app
 # sudo dotnet publish /gitsource/src/OSR4Rights.Web --configuration Release --output /var/www
-sudo dotnet publish /gitsource/src/AutoArchive.Web --configuration Release --output /var/www
+sudo dotnet publish /gitsource/src/AutoArchiver.Web --configuration Release --output /var/www
 
 # change ownership of the published files to what it will run under
 sudo chown -R www-data:www-data /var/www
