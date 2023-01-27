@@ -36,7 +36,8 @@ sudo mkdir /var/www
 # create gitsource folder and clone
 sudo mkdir /gitsource
 cd /gitsource
-sudo git clone https://github.com/osr4rightstools/osr4rights-tools .
+# sudo git clone https://github.com/osr4rightstools/osr4rights-tools .
+sudo git clone https://github.com/djhmateer/website-auto-archiver .
 
 # nginx config
 # ssl certs will already be in /certs
@@ -45,7 +46,8 @@ sudo cp /gitsource/infra/nginx.conf /etc/nginx/sites-available/default
 sudo nginx -s reload
 
 # compile and publish the web app
-sudo dotnet publish /gitsource/src/OSR4Rights.Web --configuration Release --output /var/www
+# sudo dotnet publish /gitsource/src/OSR4Rights.Web --configuration Release --output /var/www
+sudo dotnet publish /gitsource/src/AutoArchive.Web --configuration Release --output /var/www
 
 # change ownership of the published files to what it will run under
 sudo chown -R www-data:www-data /var/www
@@ -54,28 +56,25 @@ sudo chmod +x /var/www
 
 # cookie keys to allow machine to restart and for it to 'remember' cookies
 # todo - store these in blob storage?
-sudo mkdir /var/osr-cookie-keys
-sudo chown -R www-data:www-data /var/osr-cookie-keys
+# sudo mkdir /var/osr-cookie-keys
+# sudo chown -R www-data:www-data /var/osr-cookie-keys
 # allow read and write
-sudo chmod +rw /var/osr-cookie-keys
+# sudo chmod +rw /var/osr-cookie-keys
 
 # fileStores
-sudo mkdir /tusFileStore
-sudo chown -R www-data:www-data /tusFileStore
-# todo - make less
-# sudo chmod +rwx /tusFileStore
-# sudo chmod +rw /tusFileStore
+# sudo mkdir /tusFileStore
+# sudo chown -R www-data:www-data /tusFileStore
 
-sudo mkdir /osrFileStore
-sudo chown -R www-data:www-data /osrFileStore
+# sudo mkdir /osrFileStore
+# sudo chown -R www-data:www-data /osrFileStore
 # todo - make less
 # sudo chmod +rwx /osrFileStore
 
 # auto start on machine reboot
-sudo systemctl enable kestrel-osr.service
+sudo systemctl enable kestrel.service
 
 # start the Kestrel web app using systemd using kestrel-blc.service text files
-sudo systemctl start kestrel-osr.service
+sudo systemctl start kestrel.service
 
 # https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/linux-nginx?view=aspnetcore-5.0#configure-the-firewall
 sudo apt-get install ufw

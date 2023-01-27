@@ -207,16 +207,12 @@ if [ -f "$filename" ]; then
     echo "token is $token"
 
     # update DNS
-    # osr4rightstools.org
-    curl https://api.dnsimple.com/v2/63829/zones/osr4rightstools.org/records/25185791 -H "Authorization: Bearer ${token}" -H "Accept: application/json" -H "Content-Type: application/json" -X PATCH -d "$(generate_post_data)" 
+    curl https://api.dnsimple.com/v2/63829/zones/auto-archiver.com/records/41694019 -H "Authorization: Bearer ${token}" -H "Accept: application/json" -H "Content-Type: application/json" -X PATCH -d "$(generate_post_data)" 
 
-    # www.osr4rightstools.org
-    curl https://api.dnsimple.com/v2/63829/zones/osr4rightstools.org/records/25185798 -H "Authorization: Bearer ${token}" -H "Accept: application/json" -H "Content-Type: application/json" -X PATCH -d "$(generate_post_data)" 
+    curl https://api.dnsimple.com/v2/63829/zones/auto-archiver.com/records/41694024 -H "Authorization: Bearer ${token}" -H "Accept: application/json" -H "Content-Type: application/json" -X PATCH -d "$(generate_post_data)" 
 fi
 
 
-# to some degree we don't need this as am connecting using dns
-# eg using ./osrSshCurrentVm.sh
 echo -e "\nssh -o StrictHostKeyChecking=no dave@${dnsname}.westeurope.cloudapp.azure.com\n" > sshCurrentVm.sh
 
 # echo -e "password is ${adminpassword}" > password.txt
