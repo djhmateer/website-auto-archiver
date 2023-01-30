@@ -12,23 +12,23 @@
     <div>
         <div class="box-text">
             <h2 class="text-xl">Archive Social Media posts to your own Google Drive</h2>
-            <p class="text-sm"><b>Content can disappear! Taken down by the platform or deleted by the poster. Make your own copy!</b></p>
-            <p class="text-sm">We automatically download all images, video and a screenshot from an individual post on Facebook, YouTube, Twitter, TikTok, Telegram and VK.</p>
+            <p class="text-sm"><b>Linked content can disappear! Taken down by the platform or deleted by the user. Make your own copy!</b></p>
+            <p class="text-sm">We automatically download all images, video and a screenshot from public posts on Facebook, YouTube, Twitter, TikTok, Telegram and VK.</p>
 
             <p class="text-sm" id="foo" xxxx</p>
 
         </div>
     </div>
     <div>
-        <img src="img/2023/1.jpg" alt="">
+        <img src="img/2023/fb-none.jpg" alt="" width="500">
     </div>
 </section>
 
-<!-- video -->
+<!-- twitter demo -->
 <section class="box box-demo-started grid-col-2">
     <div class="box-text">
-        <h2 class="text-xl">Twitter Demo</h2>
-        <p class="text-sm">Here is the screenshot and full resolution image of the Tweet we archived.</p>
+        <h2 class="text-xl">Twitter</h2>
+        <p class="text-sm">Here is a video</p>
 
         @*  <p class="text-sm">
         This is designed as a first pass to help human rights investigators - let this tool process many images and narrow down the most likely ones for investigators to look at
@@ -48,7 +48,7 @@
 *@
         @*<video controls autoplay muted width="560" height="315">*@
         <video controls autoplay muted loop width="1059" height="418">
-            <source src="video/screen.mp4" type="video/mp4">
+            <source src="video/twitter.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -75,140 +75,47 @@
 
 
 
-
-
-<!-- Box B - Hatespeech Detection -->
-<section class="box box-b grid-col-2 ">
-    <!-- <img src="img/box-b.png" alt=""> -->
-    <div class="box-text">
-        <h2 class="text-xl" id="hs">Try HateSpeech Detection</h2>
-
-        <!-- go to hs fragment - so that it scrolls nicely -->
-        <form method="get" action="/#foo">
-
-            <div>
-                <!-- <label for="hateSpeech">Enter hatespeech:</label> -->
-            </div>
-            <input class="input text-sm" type="text" id="hateSpeech" placeholder="eg This is really not hate speech, even though I said hate" value="" name="q">
-            <input type="hidden" name="route" value="hate" />
-            @*<input type="hidden" name="cb" value="@Model.CacheBust" />*@
-
-            <div class="py-md">
-                <!-- submit the form -->
-                <button type="submit" class="btn btn-blue">Analyse Text</button>
-                @*<a href="/?route=hate&q=extra+yellow" class="btn btn-dark">extra yellow</a>*@
-                @*<a href="/?route=hate&q=extra+yellow#hs">Try: extra yellow</a>*@
-                @*<a href="/?route=hate&q=hate+trailer+trash#hs">Try: hate trailer trash</a>*@
-            </div>
-        </form>
-        <div>
-            <a href="/hate-speech#samples" class="btn btn-light">More Info</a>
-        </div>
-
-    </div>
-
-    <div class="box-text">
-        <p class="text-sm">We define "hate speech" as text that contains hateful, offensive and toxic language. </p>
-        <p class="text-sm"> We will produce a score (between 0 and 100) indicative of the extent of hate speech contained in the input text.</p>
-
-        <p class="text-sm" id="bar">Languages currently supported by this tool are English, Arabic and Russian</p>
-
-        <p class="text-sm">eg hate trailer trash</p>
-    </div>
-</section>
-
-
-<!-- Box C - FaceSearch Detection, Image on Right -->
+<!-- Facebook demo -->
 <section class="box bg-primary grid-col-2 grid-reversed">
     <!-- <img src="img/box-c.png" alt=""> -->
     <!-- <img src="img/box-f1.jpg" alt=""> -->
-    <img src="img/fs.jpg" alt="">
-    <div class="box-text">
-        <h2 class="text-xl">Try FaceSearch Detection</h2>
-        <p class="text-sm">Looks for a target face which you give as an image, in many other images.</p>
+    @*<img src="img/fs.jpg" alt="">*@
+    <video controls muted loop width="1059" height="418">
+        <source src="video/facebook.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <p class="text-sm">
+    <div class="box-text">
+        <h2 class="text-xl">Facebook</h2>
+        <p class="text-sm">asdfasdf</p>
+
+        @*<p class="text-sm">
             This is designed as a first pass to help human rights investigators - let this tool process many images and narrow down the most likely ones for investigators to look at
         </p>
-
-        <!-- <div class="py-md"> -->
+*@
         <div>
             <a href="/face-search#samples" class="btn btn-light">More Info</a>
         </div>
     </div>
 </section>
 
-<!-- Box D - Speech Parts , Image on Right -->
-<!-- <section class="box bg-primary grid-col-2 grid-reversed bg-grey"> -->
-<section class="box bg-primary grid-col-2 grid-reversed">
-    <!-- <img src="img/box-c.png" alt=""> -->
-    <!-- <img src="img/box-f1.jpg" alt=""> -->
-    <img src="img/sp.jpg" alt="">
-    <div class="box-text">
-        <h2 class="text-xl">Try SpeechParts</h2>
-        <p class="text-sm">Upload a Video or Audio file and to find only the sections with English speech. We then give you back only those sections as a WAV file. For example CCTV footage looking for only the sections with talking.</p>
 
-        <!-- <div class="py-md"> -->
-        <div>
-            <a href="/speech-parts#samples" class="btn btn-light">More Info</a>
-        </div>
-    </div>
-</section>
-
-
-
-
-<!-- Do you want a demo-->
-<section class="box box-demo-started grid-col-2">
-    <!-- col 1 - Yvonne Demo -->
-    <div>
-        <!-- <img src="img/box-f1.jpg" alt=""> -->
-        <!-- <img src="img/Yvonne-230x300.jpg" alt=""> -->
-        <img src="img/Yvonne-white.jpg" alt="">
-
-        <div class="py-lg">
-            <div class="box-text">
-                <h2 class="text-xl">Do you want a Demo?</h2>
-                <p class="text-sm">Please get in touch and we can do an online demo of the tools.</p>
-                <p class="text-sm">Yvonne.Mcdermottrees@swansea.ac.uk</p>
-                <!-- <a href="#" class="btn btn-dark">Run Demo</a> -->
-            </div>
-        </div>
-    </div>
-    <!-- col 2  - YouTube -->
-    <div>
-        <!-- <img src="img/box-f2.jpg" alt=""> -->
-        @* <img src="img/start.jpg" alt="">*@
-        <div class="videowrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5JUdVXVq4wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="bg-primary py-lg">
-            <div class="box-text">
-                <h2 class="text-xl">Watch the video above and Try Demos!</h2>
-                <p class="text-sm">Try the demos on this page. Then <a href="/account/register">register</a> so you can try with your own images and text.</p>
-                <a href="/account/register" class="btn btn-blue">Try for free</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- See us at RightsCon -->
+<!--  Numbers and stats-->
 <section class="box bg-grey text-center py-md">
     <div class="box-inner">
-        <h2 class="text-md">RightsCon 2022!</h2>
-        <p class="text-sm">RightsCon is the world’s leading summit on human rights in the digital age. The 11th edition of RightsCon took place from Monday, June 6 to Friday, June 10, 2022 online and across all timezones. We presented our tools, had good questions, and met some inspiring people virtually</p>
-        <p class="text-sm">We look forward to seeing you there next year!</p>
+        <h2 class="text-md">Stats</h2>
+        <p class="text-sm">Total Link processed: 30,000 </p>
+        <p class="text-sm">Total GB of images and video: 400GB</p>
 
-        <a href="https://rightscon.org">rightscon.org</a>
+        @*<a href="https://rightscon.org">rightscon.org</a>*@
     </div>
 </section>
 
-<!-- Thank you to-->
+<!-- Used by-->
 <section class="box box-thank-you text-center py-md">
     <div class="box-inner">
-        <h2 class="text-md">Thank You</h2>
-        <p class="text-sm">To our collaborators, sponsors and technology providers</p>
+        <h2 class="text-md">Used by</h2>
+        @*<p class="text-sm">To our collaborators, sponsors and technology providers</p>*@
         <!-- <ul>
             <li>ESRC</li>
         </ul> -->
@@ -219,32 +126,159 @@
 <!-- box gives 1440 max width -->
 <section class="box box-thank-you-logos">
     <ul>
-        <li><a href="https://esrc.ukri.org/"><img src="img/esrc-logo.jpg" alt="Economic and Social Research Council" title="Economic and Social Research Council"></a></li>
-        <li><a href="https://www.swansea.ac.uk/law/"><img src="img/swansea-university-logo.svg" alt="Sweansea University" title="Swansea University"></a></li>
+        <li><a href="https://www.info-res.org/"><img src="img/2023/cir.webp" alt="asdf" title="cier"></a></li>
+    @*    <li><a href="https://www.swansea.ac.uk/law/"><img src="img/swansea-university-logo.svg" alt="Sweansea University" title="Swansea University"></a></li>
         <li><a href="https://www.hw.ac.uk/"><img src="img/hw-logo.svg" alt="Heriot Watt University" title="Heriot Watt University"></a></li>
         <li><a href="https://www.manchester.ac.uk/"><img src="img/um.svg" alt="University of Manchester" title="University of Manchester"></a></li>
-        <li><a href="https://hmsoftware.co.uk/"><img src="img/hms-logo2.png" alt="HMSoftware" title="Amnesty International"></a></li>
-        <!-- <li><img src="img/esrc-logo.jpg" alt=""></li> -->
+        <li><a href="https://hmsoftware.co.uk/"><img src="img/hms-logo2.png" alt="HMSoftware" title="Amnesty International"></a></li>*@
     </ul>
     <!-- https://cs.swansea.ac.uk/~cssimonr/resources/ -->
     <!-- https://www.hw.ac.uk/uk/services/media-services/brand-guidelines.htm -->
 </section>
 
-<!-- <footer class="footer bg-grey">
-    <div class="footer-container">
-        <ul>
-            <li><a href="#">&copy; 2017 - 2022 OSR4Rights</a></li>
-            <li><a href="#">GitHub Source</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Hosted in the EU on Microsoft Azure</a></li>
-        </ul>
-    </div>
-</footer> -->
-<!-- Team and About Us -->
-<!-- <section class="box box-x text-center">
-    <div class="box-inner">
-        <h2 class="text-md">Team and About Us</h2>
-        <p class="text-sm">Here are the team that have brought you OSR4RightsTools</p>
 
+
+
+
+<!-- Box D - Speech Parts , Image on Right -->
+@*<section class="box bg-primary grid-col-2 grid-reversed">
+    <img src="img/sp.jpg" alt="">
+    <div class="box-text">
+        <h2 class="text-xl">Try SpeechParts</h2>
+        <p class="text-sm">Upload a Video or Audio file and to find only the sections with English speech. We then give you back only those sections as a WAV file. For example CCTV footage looking for only the sections with talking.</p>
+
+        <div>
+            <a href="/speech-parts#samples" class="btn btn-light">More Info</a>
+        </div>
     </div>
-</section> -->
+</section>*@
+
+
+
+
+<!-- Human Rights-->
+<section class="box box-demo-started grid-col-2">
+    <div>
+        <!-- <img src="img/box-f1.jpg" alt=""> -->
+        <!-- <img src="img/Yvonne-230x300.jpg" alt=""> -->
+        @*<img src="img/Yvonne-white.jpg" alt="">*@
+
+        <div class="py-lg">
+            <div class="box-text">
+                <h2 class="text-xl">Human Rights</h2>
+                <p class="text-sm">Asdf</p>
+                <p class="text-sm">asdf</p>
+                <!-- <a href="#" class="btn btn-dark">Run Demo</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- col 2  - YouTube -->
+    <div>
+        <!-- <img src="img/box-f2.jpg" alt=""> -->
+        @* <img src="img/start.jpg" alt="">*@
+    @*    <div class="videowrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5JUdVXVq4wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>*@
+
+        <div class="bg-primary py-lg">
+            <div class="box-text">
+                <h2 class="text-xl">asdf</h2>
+                <p class="text-sm"> asdf<a href="/account/register">asasdff</a> asdfasdf</p>
+                <a href="/account/register" class="btn btn-blue">asdfasdf</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Journalists -->
+<section class="box box-demo-started grid-col-2">
+    <div>
+        <!-- <img src="img/box-f1.jpg" alt=""> -->
+        <!-- <img src="img/Yvonne-230x300.jpg" alt=""> -->
+        @*<img src="img/Yvonne-white.jpg" alt="">*@
+
+        <div class="py-lg">
+            <div class="box-text">
+                <h2 class="text-xl">Investigative Journalists</h2>
+                <p class="text-sm">Asdf</p>
+                <p class="text-sm">asdf</p>
+                <!-- <a href="#" class="btn btn-dark">Run Demo</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- col 2  - YouTube -->
+    <div>
+        <!-- <img src="img/box-f2.jpg" alt=""> -->
+        @* <img src="img/start.jpg" alt="">*@
+        @*    <div class="videowrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5JUdVXVq4wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>*@
+
+        <div class="bg-primary py-lg">
+            <div class="box-text">
+                <h2 class="text-xl">asdf</h2>
+                <p class="text-sm"> asdf<a href="/account/register">asasdff</a> asdfasdf</p>
+                <a href="/account/register" class="btn btn-blue">asdfasdf</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About us-->
+<section class="box box-demo-started grid-col-2">
+    <div>
+        <!-- <img src="img/box-f1.jpg" alt=""> -->
+        <!-- <img src="img/Yvonne-230x300.jpg" alt=""> -->
+        @*<img src="img/Yvonne-white.jpg" alt="">*@
+
+        <div class="py-lg">
+            <div class="box-text">
+                <h2 class="text-xl">About us</h2>
+                <p class="text-sm">Asdf</p>
+                <p class="text-sm">asdf</p>
+                <!-- <a href="#" class="btn btn-dark">Run Demo</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- col 2  - YouTube -->
+    <div>
+        <!-- <img src="img/box-f2.jpg" alt=""> -->
+        @* <img src="img/start.jpg" alt="">*@
+        @*    <div class="videowrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5JUdVXVq4wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>*@
+
+        <div class="bg-primary py-lg">
+            <div class="box-text">
+                <h2 class="text-xl">asdf</h2>
+                <p class="text-sm"> asdf<a href="/account/register">asasdff</a> asdfasdf</p>
+                <a href="/account/register" class="btn btn-blue">asdfasdf</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="box box-thank-you text-center py-md">
+    <div class="box-inner">
+        <h2 class="text-md">Pricing</h2>
+        <p class="text-sm">£80pm for unlimited links. Including the Facebook archiver.</p>
+        <!-- <ul>
+            <li>ESRC</li>
+        </ul> -->
+    </div>
+</section>
+
+<!-- See us at RightsCon -->
+@*<section class="box bg-grey text-center py-md">
+    <div class="box-inner">
+        <h2 class="text-md">RightsCon 2022!</h2>
+        <p class="text-sm">RightsCon is the world’s leading summit on human rights in the digital age. The 11th edition of RightsCon took place from Monday, June 6 to Friday, June 10, 2022 online and across all timezones. We presented our tools, had good questions, and met some inspiring people virtually</p>
+        <p class="text-sm">We look forward to seeing you there next year!</p>
+
+        <a href="https://rightscon.org">rightscon.org</a>
+    </div>
+</section>
+*@

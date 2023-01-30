@@ -22,37 +22,18 @@
         <!-- Logo -->
         <div class="navbar-logo">
             <a href="/">
-                <img src="/img/osr-logo.png" alt="OSR4RightsTools">
+                <span><b>AA</b></span>
+                @*<img src="/img/osr-logo.png" alt="OSR4RightsTools">*@
             </a>
         </div>
 
         <!-- Navbar Left -->
         <ul class="navbar-nav-left">
-            <li class="underline"><a href="/hate-speech">HateSpeech</a></li>
-            <li class="underline"><a href="/face-search">FaceSearch</a></li>
-            <li class="underline"><a href="/speech-parts">SpeechParts</a></li>
-            <li class="underline"><a href="/auto-archiver">AutoArchiver</a></li>
-            <li class="underline"><a href="/fire-map">FireMap</a></li>
-            @* @if (HttpContextAccessor.HttpContext!.User.Identity!.IsAuthenticated)
-            {
-            <li class="underline"><a href="/results">Results</a></li>
-            }*@
+            <li class="underline"><a href="/hate-speech">Human Rights</a></li>
+            <li class="underline"><a href="/face-search">Journalists</a></li>
 
-            @{
-                bool isAdmin = false;
-                var roles = User?.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
-                if (roles.Contains("Admin")) isAdmin = true;
-            }
-
-            @if (isAdmin)
-            {
-                <li class="underline"><a href="/admin/index">Admin</a></li>
-                <li class="underline"><a href="/admin/dashboard">Dash</a></li>
-            }
-            else
-            {
-                <li class="underline"><a href="https://osr4rights.org">About</a></li>
-            }
+            <li class="underline"><a href="https://osr4rights.org">About</a></li>
+            <li class="underline"><a href="/fire-map">Pricing</a></li>
 
         </ul>
 
@@ -63,20 +44,20 @@
             @*
             @if (HttpContextAccessor.HttpContext!.User.Identity!.IsAuthenticated)
             {
-                <li class="underline"><a href="/account/manage">@User?.Identity?.Name</a></li>
-                <li class="underline">
-                    <form class="form-inline" asp-page="/account/logout" method="post">
-                        <button type="submit" class="btn btn-light">Logout</button>
-                    </form>
-                </li>
+            <li class="underline"><a href="/account/manage">@User?.Identity?.Name</a></li>
+            <li class="underline">
+            <form class="form-inline" asp-page="/account/logout" method="post">
+            <button type="submit" class="btn btn-light">Logout</button>
+            </form>
+            </li>
             }
             else
             {
-                <li class="underline"><a href="/account/login">Login</a></li>
-                <li><a href="/account/register" class="btn btn-blue">Try for free</a></li>
+            <li class="underline"><a href="/account/login">Login</a></li>
+            <li><a href="/account/register" class="btn btn-blue">Try for free</a></li>
             }
             *@
-            <li class="underline"><a href="/account/login">Login</a></li>
+            <li class="underline"><a href="/account/login">Contact Us</a></li>
             <li><a href="/account/register" class="btn btn-blue">Try for free</a></li>
 
         </ul>
@@ -110,20 +91,20 @@
 
             <div>
                 <ul>
-                @*
+                    @*
                     @if (HttpContextAccessor.HttpContext!.User.Identity!.IsAuthenticated)
                     {
-                        <li><a href="/account/manage">Hello @User?.Identity?.Name!</a></li>
-                        <li>
-                            <form class="form-inline" asp-page="/account/logout" method="post">
-                                <button type="submit" class="btn btn-light">Logout</button>
-                            </form>
-                        </li>
+                    <li><a href="/account/manage">Hello @User?.Identity?.Name!</a></li>
+                    <li>
+                    <form class="form-inline" asp-page="/account/logout" method="post">
+                    <button type="submit" class="btn btn-light">Logout</button>
+                    </form>
+                    </li>
                     }
                     else
                     {
-                        <li class="underline login-link"><a href="/account/login">Login</a></li>
-                        <li><a href="/account/register" class="btn btn-blue">Try for free</a></li>
+                    <li class="underline login-link"><a href="/account/login">Login</a></li>
+                    <li><a href="/account/register" class="btn btn-blue">Try for free</a></li>
                     }
                     *@
                 </ul>
@@ -189,10 +170,10 @@
     <!-- Footer -->
     <footer class="footer bg-grey">
         <ul>
-            <li>&copy; 2017 - 2022 OSR4Rights</li>
-            <li><a href="https://github.com/osr4rightstools/osr4rights-tools">GitHub Source</a></li>
+            <li>&copy; 2023 auto-archiver.com</li>
+            <li><a href="https://github.com/djhmateer/auto-archiver">Archiver is Open Source</a></li>
             <!--<li><a href="#">Sitemap</a></li>-->
-            <li>Hosted in the EU on Microsoft Azure</li>
+            <li>Hosted in the EU on Microsoft Azure and others</li>
         </ul>
     </footer>
 
