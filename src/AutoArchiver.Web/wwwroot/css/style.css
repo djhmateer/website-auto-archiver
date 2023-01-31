@@ -23,11 +23,11 @@
 html,
 body {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-feature-settings: normal;
+    /*font-feature-settings: normal;*/
     /*this is what is in osr*/
     /*font-family: "Open Sans", sans-serif;*/
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    line-height: 1.4;
+    /*line-height: 1.4;*/
     color: #000;
 }
 
@@ -191,7 +191,7 @@ img {
         /* color: #fff; */
     }
 
-/* Hatespeech input box */
+/* Contact input box */
 .input {
     width: 500px;
     /* font-size: 15px; */
