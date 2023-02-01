@@ -36,12 +36,26 @@ namespace AutoArchiver.Web.Pages
             var postmarkServerToken = AppConfiguration.LoadFromEnvironment().PostmarkServerToken;
 
             //var response = await Email.SendTemplate("forgot-password", email, "Thank you - we will get back to you!", postmarkServerToken);
-            var ToEmailAddress = email;
-            var subject = "Thank you";
-            var text = "Thank you - we will get back to you soon";
-            var html = "Thank you - we will get back to you soon";
-            var foo = new AAEmail(ToEmailAddress, subject, text, html);
-            var response = await Email.Send(foo, postmarkServerToken);
+
+            // send confirmation to the person who just submitted email on site
+            {
+                var ToEmailAddress = email;
+                var subject = "Thank you";
+                var text = "Thank you - we will get back to you soon";
+                var html = "Thank you - we will get back to you soon";
+                var foo = new AAEmail(ToEmailAddress, subject, text, html);
+                var response = await Email.Send(foo, postmarkServerToken);
+            }
+
+            // send email to the admin 
+            {
+                var ToEmailAddress = "dave@hmsoftware.co.uk";
+                var subject = "auto-archiver message";
+                var text = $"sender is: {email}, message is: {message}";
+                var html = $"sender is: {email}, message is: {message}";
+                var foo = new AAEmail(ToEmailAddress, subject, text, html);
+                var response = await Email.Send(foo, postmarkServerToken);
+            }
 
             // PRG
             return LocalRedirect("/email-success");
