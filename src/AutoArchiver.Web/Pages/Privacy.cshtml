@@ -1,8 +1,29 @@
 ﻿@page
 @model PrivacyModel
-@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    ViewData["Title"] = "Privacy";
+}
+<!-- asdf -->
+<section class="box box-a py-md">
+    <div>
+        <h2 class="text-xl">Privacy and Data Protection</h2>
+        <p class="text-sm">During your trial period, or if you choose to use our Google Accounts, then we would have access to the URL's you input, and the corresponding outputs of the auto-archiver. Accounts are protected using strong passwords and MFA (Multi Factor Authentication)</p>
+
+        <p class="text-sm">When you own your own Spreadsheet and Drive, you would share the spreadsheet with our Google service account, and generate an OAuth2 access token for our system to read and write to the output Google Drive</p>
+
+        <p class="text-sm">All code is Open Source and available to be audited. <a href="">Original Source of auto-archiver</a> and <a href="">Our fork which includes the Facebook Archiver</a> and build scripts. This website itself is <a href="">open source</a></p>
+
+        <p class="text-sm">All secrets are handled by our auto deployment system. VM's are kept fully patched weekly. Access is via SSH keys only. Traffic and monitoring have daily checks.</p>
+
+    </div>
+</section>
+
+<section class="box box-a py-md">
+    <div>
+        <h2 class="text-xl">Cookies</h2>
+        <p class="text-sm">We use no tracking cookies.</p>
+
+    </div>
+</section>
+
