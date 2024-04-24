@@ -141,6 +141,9 @@ done
 
 scp -o StrictHostKeyChecking=no ../secrets/www_auto-archiver_com.key dave@${dnsname}.westeurope.cloudapp.azure.com:/certs/
 
+
+exit 0
+
 # gets .NET, clones source code, does a release build, starts systemd kestrel service
 # systemd reads from file created on the vm above
 # and sets environmental variables and starts kestrel webserver
